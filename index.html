@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catthode - From CRT to OLED</title>
     <meta name="description" content="A warm, retro-futuristic theme for your developer tools.">
     <link rel="icon" type="image/png" href="assets/icon.png">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation.css">
 </head>
+
 <body>
     <canvas id="crt-canvas"></canvas>
     <div class="crt-overlay"></div>
@@ -29,16 +33,18 @@
                 <img src="assets/icon.png" alt="Catthode Logo" class="logo glow-img">
             </div>
             <h1 class="title">Catthode</h1>
-            <p class="subtitle">From CRT to OLED. <span class="accent">Bringing warmth back.</span></p>
+            <p class="subtitle">From CRT to OLED. <span class="accent">Bringing warmth back to a world of cold
+                    themes.</span></p>
             <div class="actions">
                 <a href="#install" class="btn primary">Get Started</a>
-                <a href="https://github.com/catthode" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/catthode" target="_blank" class="btn secondary"><i
+                        class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </header>
 
     <main class="container">
-        
+
         <section class="preview">
             <div class="code-window glow-border">
                 <div class="window-header">
@@ -63,6 +69,70 @@
             </div>
         </section>
 
+        <section class="palette">
+            <h2 class="section-title">Color Palette</h2>
+
+            <div class="palette-group">
+                <h3>Surface</h3>
+                <div class="swatch-grid">
+                    <div class="swatch" style="--color: #000000"><span class="code">#000000</span><span
+                            class="name">Base</span></div>
+                    <div class="swatch" style="--color: #141414"><span class="code">#141414</span><span
+                            class="name">Sidebar</span></div>
+                    <div class="swatch" style="--color: #2d2d2d"><span class="code">#2d2d2d</span><span
+                            class="name">Selection</span></div>
+                    <div class="swatch" style="--color: #636363"><span class="code">#636363</span><span
+                            class="name">Border</span></div>
+                </div>
+            </div>
+
+            <div class="palette-group">
+                <h3>Phosphor</h3>
+                <div class="swatch-grid">
+                    <div class="swatch" style="--color: #ffffff"><span class="code">#ffffff</span><span
+                            class="name">Text</span></div>
+                    <div class="swatch" style="--color: #e8e8e8"><span class="code">#e8e8e8</span><span
+                            class="name">Variable</span></div>
+                    <div class="swatch" style="--color: #b3b3b3"><span class="code">#b3b3b3</span><span
+                            class="name">Comment</span></div>
+                    <div class="swatch" style="--color: #757575"><span class="code">#757575</span><span
+                            class="name">Ignored</span></div>
+                </div>
+            </div>
+
+            <div class="palette-group">
+                <h3>Glow</h3>
+                <div class="swatch-grid">
+                    <div class="swatch" style="--color: #fae2c8"><span class="code">#fae2c8</span><span
+                            class="name">Wheat</span></div>
+                    <div class="swatch" style="--color: #d9b98c"><span class="code">#d9b98c</span><span
+                            class="name">Tan</span></div>
+                    <div class="swatch" style="--color: #ffb86c"><span class="code">#ffb86c</span><span
+                            class="name">Gold</span></div>
+                    <div class="swatch" style="--color: #ff9e3b"><span class="code">#ff9e3b</span><span
+                            class="name">Amber</span></div>
+                    <div class="swatch" style="--color: #f08d49"><span class="code">#f08d49</span><span
+                            class="name">Clay</span></div>
+                </div>
+            </div>
+
+            <div class="palette-group">
+                <h3>Accents</h3>
+                <div class="swatch-grid">
+                    <div class="swatch" style="--color: #ff6b6b"><span class="code">#ff6b6b</span><span
+                            class="name">Red</span></div>
+                    <div class="swatch" style="--color: #b9d665"><span class="code">#b9d665</span><span
+                            class="name">Green</span></div>
+                    <div class="swatch" style="--color: #aee6d6"><span class="code">#aee6d6</span><span
+                            class="name">Cyan</span></div>
+                    <div class="swatch" style="--color: #9cd9e6"><span class="code">#9cd9e6</span><span
+                            class="name">Blue</span></div>
+                    <div class="swatch" style="--color: #eba4be"><span class="code">#eba4be</span><span
+                            class="name">Purple</span></div>
+                </div>
+            </div>
+        </section>
+
         <section id="install" class="ecosystem">
             <h2 class="section-title">Available Ports</h2>
             <div id="repo-grid" class="grid">
@@ -79,4 +149,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
