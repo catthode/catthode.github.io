@@ -313,6 +313,13 @@ code { font-family: var(--font-mono); font-size: 0.95rem; }
 .card[hidden] { display: none; }
 .card-icon { color: var(--amber); line-height: 1; }
 .card-icon svg { width: 32px; height: 32px; fill: currentColor; display: block; filter: drop-shadow(0 0 8px rgba(255, 158, 59, 0.35)); }
+.card-glyph {
+  min-height: 32px;
+  font-family: var(--font-mono);
+  font-size: 1.55rem;
+  font-weight: 800;
+  filter: drop-shadow(0 0 8px rgba(255, 158, 59, 0.35));
+}
 .card h3 { color: var(--wheat); }
 .card p { color: var(--comment); font-size: 0.95rem; }
 .install {
