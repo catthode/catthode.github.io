@@ -1,60 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catthode - From CRT to OLED</title>
-    <meta name="description" content="A warm, retro-futuristic theme for your developer tools.">
-    <link rel="icon" type="image/png" href="assets/icon.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catthode — From CRT to OLED</title>
+  <meta name="description" content="Catthode is a warm, retro-futuristic theme for developer tools. From CRT to OLED — bringing warmth back to a world of cold themes.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Catthode — From CRT to OLED">
+  <meta property="og:description" content="A warm, retro-futuristic theme for your developer tools. 18 colors, 8+ ports, zero eye-strain.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Catthode — From CRT to OLED">
+  <meta name="twitter:description" content="A warm, retro-futuristic theme for your developer tools.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <canvas id="crt-canvas"></canvas>
-    <div class="crt-overlay"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas id="crt-canvas" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
 
-    <header class="hero">
-        <div class="container">
-            <div class="logo-container">
-                <img src="assets/icon.png" alt="Catthode Logo" class="logo glow-img">
-            </div>
-            <h1 class="title">Catthode</h1>
-            <p class="subtitle">From CRT to OLED. <span class="accent">Bringing warmth back to a world of cold
-                    themes.</span></p>
-            <div class="actions">
-                <a href="#install" class="btn primary">Get Started</a>
-                <a href="https://github.com/catthode" target="_blank" class="btn secondary"><i
-                        class="fab fa-github"></i> GitHub</a>
-            </div>
+  <header class="hero">
+    <div class="container">
+      <div class="logo-container">
+        <img src="assets/icon.png" alt="Catthode logo — a warm glowing CRT" class="logo" width="120" height="120" fetchpriority="high">
+      </div>
+      <h1 class="title">Catthode</h1>
+      <p class="subtitle">From CRT to OLED. <span class="accent">Bringing warmth back to a world of cold themes.</span></p>
+      <div class="actions">
+        <a href="#install" class="btn primary">Get Started</a>
+        <a href="https://github.com/catthode" target="_blank" rel="noopener" class="btn secondary"><span aria-hidden="true">⌁</span> GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="preview" aria-labelledby="preview-title">
+      <h2 id="preview-title" class="visually-hidden">Code preview</h2>
+      <div class="code-window">
+        <div class="window-header">
+          <span class="dot red" aria-hidden="true"></span>
+          <span class="dot yellow" aria-hidden="true"></span>
+          <span class="dot green" aria-hidden="true"></span>
+          <span class="file-name">demo.py</span>
         </div>
-    </header>
-
-    <main class="container">
-
-        <section class="preview">
-            <div class="code-window glow-border">
-                <div class="window-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="title">demo.py</span>
-                </div>
-                <pre><code class="language-python">
-<span class="k">def</span> <span class="f">calculate_warmth</span>(<span class="a">input_theme</span>):
+        <pre><code><span class="k">def</span> <span class="f">calculate_warmth</span>(<span class="a">input_theme</span>):
     <span class="c"># Bringing the heat back to your code</span>
     <span class="v">base_temp</span> = <span class="n">2700</span>  <span class="c"># Kelvin</span>
     <span class="k">if</span> <span class="a">input_theme</span> == <span class="s">"Catthode"</span>:
@@ -64,90 +55,154 @@
 <span class="k">class</span> <span class="t">Filament</span>:
     <span class="k">def</span> <span class="f">__init__</span>(<span class="a">self</span>):
         <span class="a">self</span>.<span class="v">glow</span> = <span class="k">True</span>
-        <span class="a">self</span>.<span class="v">type</span> = <span class="s">"Tungsten"</span>
-                </code></pre>
-            </div>
-        </section>
+        <span class="a">self</span>.<span class="v">type</span> = <span class="s">"Tungsten"</span></code></pre>
+      </div>
+    </section>
 
-        <section class="palette">
-            <h2 class="section-title">Color Palette</h2>
+    <section class="palette" aria-labelledby="palette-title">
+      <h2 id="palette-title" class="section-title">Color Palette</h2>
+      <p class="section-hint">Click any swatch to copy its hex value.</p>
 
-            <div class="palette-group">
-                <h3>Surface</h3>
-                <div class="swatch-grid">
-                    <div class="swatch" style="--color: #000000"><span class="code">#000000</span><span
-                            class="name">Base</span></div>
-                    <div class="swatch" style="--color: #141414"><span class="code">#141414</span><span
-                            class="name">Sidebar</span></div>
-                    <div class="swatch" style="--color: #2d2d2d"><span class="code">#2d2d2d</span><span
-                            class="name">Selection</span></div>
-                    <div class="swatch" style="--color: #636363"><span class="code">#636363</span><span
-                            class="name">Border</span></div>
-                </div>
-            </div>
+      <div class="palette-group">
+        <h3 id="pg-surface">Surface</h3>
+        <div class="strip" role="list" aria-labelledby="pg-surface">
+          <button class="strip-swatch" role="listitem" data-hex="#000000"><span class="code">#000000</span><span class="name">Base</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#141414"><span class="code">#141414</span><span class="name">Sidebar</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#2D2D2D"><span class="code">#2D2D2D</span><span class="name">Selection</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#636363"><span class="code">#636363</span><span class="name">Border</span></button>
+        </div>
+      </div>
 
-            <div class="palette-group">
-                <h3>Phosphor</h3>
-                <div class="swatch-grid">
-                    <div class="swatch" style="--color: #ffffff"><span class="code">#ffffff</span><span
-                            class="name">Text</span></div>
-                    <div class="swatch" style="--color: #e8e8e8"><span class="code">#e8e8e8</span><span
-                            class="name">Variable</span></div>
-                    <div class="swatch" style="--color: #b3b3b3"><span class="code">#b3b3b3</span><span
-                            class="name">Comment</span></div>
-                    <div class="swatch" style="--color: #757575"><span class="code">#757575</span><span
-                            class="name">Ignored</span></div>
-                </div>
-            </div>
+      <div class="palette-group">
+        <h3 id="pg-phosphor">Phosphor</h3>
+        <div class="strip" role="list" aria-labelledby="pg-phosphor">
+          <button class="strip-swatch" role="listitem" data-hex="#FFFFFF"><span class="code">#FFFFFF</span><span class="name">Text</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#E8E8E8"><span class="code">#E8E8E8</span><span class="name">Variable</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#B3B3B3"><span class="code">#B3B3B3</span><span class="name">Comment</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#757575"><span class="code">#757575</span><span class="name">Ignored</span></button>
+        </div>
+      </div>
 
-            <div class="palette-group">
-                <h3>Glow</h3>
-                <div class="swatch-grid">
-                    <div class="swatch" style="--color: #fae2c8"><span class="code">#fae2c8</span><span
-                            class="name">Wheat</span></div>
-                    <div class="swatch" style="--color: #d9b98c"><span class="code">#d9b98c</span><span
-                            class="name">Tan</span></div>
-                    <div class="swatch" style="--color: #ffb86c"><span class="code">#ffb86c</span><span
-                            class="name">Gold</span></div>
-                    <div class="swatch" style="--color: #ff9e3b"><span class="code">#ff9e3b</span><span
-                            class="name">Amber</span></div>
-                    <div class="swatch" style="--color: #f08d49"><span class="code">#f08d49</span><span
-                            class="name">Clay</span></div>
-                </div>
-            </div>
+      <div class="palette-group">
+        <h3 id="pg-glow">Glow</h3>
+        <div class="strip" role="list" aria-labelledby="pg-glow">
+          <button class="strip-swatch" role="listitem" data-hex="#FAE2C8"><span class="code">#FAE2C8</span><span class="name">Wheat</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#D9B98C"><span class="code">#D9B98C</span><span class="name">Tan</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#FFB86C"><span class="code">#FFB86C</span><span class="name">Gold</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#FF9E3B"><span class="code">#FF9E3B</span><span class="name">Amber</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#F08D49"><span class="code">#F08D49</span><span class="name">Clay</span></button>
+        </div>
+      </div>
 
-            <div class="palette-group">
-                <h3>Accents</h3>
-                <div class="swatch-grid">
-                    <div class="swatch" style="--color: #ff6b6b"><span class="code">#ff6b6b</span><span
-                            class="name">Red</span></div>
-                    <div class="swatch" style="--color: #b9d665"><span class="code">#b9d665</span><span
-                            class="name">Green</span></div>
-                    <div class="swatch" style="--color: #aee6d6"><span class="code">#aee6d6</span><span
-                            class="name">Cyan</span></div>
-                    <div class="swatch" style="--color: #9cd9e6"><span class="code">#9cd9e6</span><span
-                            class="name">Blue</span></div>
-                    <div class="swatch" style="--color: #eba4be"><span class="code">#eba4be</span><span
-                            class="name">Purple</span></div>
-                </div>
-            </div>
-        </section>
+      <div class="palette-group">
+        <h3 id="pg-accents">Accents</h3>
+        <div class="strip" role="list" aria-labelledby="pg-accents">
+          <button class="strip-swatch" role="listitem" data-hex="#FF6B6B"><span class="code">#FF6B6B</span><span class="name">Red</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#B9D665"><span class="code">#B9D665</span><span class="name">Green</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#AEE6D6"><span class="code">#AEE6D6</span><span class="name">Cyan</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#9CD9E6"><span class="code">#9CD9E6</span><span class="name">Blue</span></button>
+          <button class="strip-swatch" role="listitem" data-hex="#EBA4BE"><span class="code">#EBA4BE</span><span class="name">Purple</span></button>
+        </div>
+      </div>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+    </section>
 
-        <section id="install" class="ecosystem">
-            <h2 class="section-title">Available Ports</h2>
-            <div id="repo-grid" class="grid">
-                <!-- Content populated by script.js -->
-                <div class="loading">Loading repositories...</div>
-            </div>
-        </section>
+    <section id="install" class="ecosystem" aria-labelledby="ports-title">
+      <h2 id="ports-title" class="section-title">Available Ports</h2>
+      <div class="search-row">
+        <label for="port-search">Filter ports</label>
+        <input type="search" id="port-search" placeholder="Search ports… (e.g. tmux)" autocomplete="off">
+      </div>
+      <div id="repo-grid" class="grid">
+        <article class="card" data-name="alacritty terminal emulator">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 576 512" width="32" height="32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6zM256 416H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg></div>
+          <h3>Alacritty</h3>
+          <p>Warm GPU-accelerated terminal theme with amber cursor and wheat text.</p>
+          <pre class="install"><code>cp alacritty/catthode.toml ~/.config/alacritty/</code></pre>
+          <div class="card-row">
+            <button class="copy-btn" data-copy="cp alacritty/catthode.toml ~/.config/alacritty/">Copy</button>
+            <a class="card-link" href="https://github.com/catthode/alacritty" target="_blank" rel="noopener">Repo →</a>
+          </div>
+        </article>
+        <article class="card" data-name="vscode visual studio code editor">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 640 512" width="32" height="32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></div>
+          <h3>VS Code</h3>
+          <p>Full workbench + syntax theme. Sidebar, selection, and gold keywords.</p>
+          <pre class="install"><code>code --install-extension catthode.catthode</code></pre>
+          <div class="card-row">
+            <button class="copy-btn" data-copy="code --install-extension catthode.catthode">Copy</button>
+            <a class="card-link" href="https://github.com/catthode/vscode" target="_blank" rel="noopener">Repo →</a>
+          </div>
+        </article>
+        <article class="card" data-name="tmux multiplexer statusline">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 576 512" width="32" height="32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></svg></div>
+          <h3>Tmux</h3>
+          <p>Amber statusline, clay borders, and wheat window indicators.</p>
+          <pre class="install"><code>cp tmux/catthode.conf ~/.tmux.conf</code></pre>
+          <div class="card-row">
+            <button class="copy-btn" data-copy="cp tmux/catthode.conf ~/.tmux.conf">Copy</button>
+            <a class="card-link" href="https://github.com/catthode/tmux" target="_blank" rel="noopener">Repo →</a>
+          </div>
+        </article>
+        <article class="card" data-name="obsidian markdown notes vault">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 448 512" width="32" height="32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H288V368c0-26.5 21.5-48 48-48H448V96c0-35.3-28.7-64-64-64H64zM448 352H402.7 336c-8.8 0-16 7.2-16 16v66.7V480l32-32 64-64 32-32z"/></svg></div>
+          <h3>Obsidian</h3>
+          <p>Warm paper-on-OLED vault theme with tan headings and gold links.</p>
+          <pre class="install"><code>cp -r obsidian/catthode ~/vault/.obsidian/themes/</code></pre>
+          <div class="card-row">
+            <button class="copy-btn" data-copy="cp -r obsidian/catthode ~/vault/.obsidian/themes/">Copy</button>
+            <a class="card-link" href="https://github.com/catthode/obsidian" target="_blank" rel="noopener">Repo →</a>
+          </div>
+        </article>
+        <article class="card" data-name="btop system monitor htop">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg></div>
+          <h3>Btop</h3>
+          <p>Phosphor graphs on true black with amber CPU and green memory.</p>
+          <pre class="install"><code>cp btop/catthode.theme ~/.config/btop/themes/</code></pre>
+          <div class="card-row">
+            <button class="copy-btn" data-copy="cp btop/catthode.theme ~/.config/btop/themes/">Copy</button>
+            <a class="card-link" href="https://github.com/catthode/btop" target="_blank" rel="noopener">Repo →</a>
+          </div>
+        </article>
+        <article class="card" data-name="micro text editor colorscheme">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 576 512" width="32" height="32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6zM256 416H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg></div>
+          <h3>Micro</h3>
+          <p>Terminal editor colorscheme tuned for wheat-on-black readability.</p>
+          <pre class="install"><code>cp micro/catthode.json ~/.config/micro/colorschemes/</code></pre>
+          <div class="card-row">
+            <button class="copy-btn" data-copy="cp micro/catthode.json ~/.config/micro/colorschemes/">Copy</button>
+            <a class="card-link" href="https://github.com/catthode/micro" target="_blank" rel="noopener">Repo →</a>
+          </div>
+        </article>
+        <article class="card" data-name="fzf fuzzy finder shell">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
+          <h3>FZF</h3>
+          <p>Fuzzy-finder palette: gold prompt, amber selection, dim preview border.</p>
+          <pre class="install"><code>source fzf/catthode.sh</code></pre>
+          <div class="card-row">
+            <button class="copy-btn" data-copy="source fzf/catthode.sh">Copy</button>
+            <a class="card-link" href="https://github.com/catthode/fzf" target="_blank" rel="noopener">Repo →</a>
+          </div>
+        </article>
+        <article class="card" data-name="chrome browser theme web store">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 256C0 209.4 12.47 165.6 34.27 127.1L144.1 318.3C166 357.5 207.9 384 256 384C270.3 384 283.1 381.7 296.8 377.4L220.5 509.6C95.9 492.3 0 385.3 0 256zM365.1 321.6C377.4 302.4 384 279.1 384 256C384 217.8 367.2 183.5 340.7 160H493.4C505.4 189.6 512 222.1 512 256C512 397.4 397.4 511.1 256 512L365.1 321.6zM477.8 128H256C193.1 128 142.3 172.1 130.5 230.7L54.19 98.47C101 38.53 174 0 256 0C350.8 0 433.5 51.48 477.8 128V128zM168 256C168 207.4 207.4 168 256 168C304.6 168 344 207.4 344 256C344 304.6 304.6 344 256 344C207.4 344 168 304.6 168 256z"/></svg></div>
+          <h3>Chrome</h3>
+          <p>New-tab warmth: black frame, amber toolbar, wheat active tab.</p>
+          <pre class="install"><code>Apply “Catthode” from the Chrome Web Store</code></pre>
+          <div class="card-row">
+            <button class="copy-btn" data-copy="Catthode for Chrome — Chrome Web Store">Copy</button>
+            <a class="card-link" href="https://github.com/catthode/chrome" target="_blank" rel="noopener">Repo →</a>
+          </div>
+        </article>
+      </div>
+      <p class="no-results" id="no-results" hidden>No ports match your search.</p>
+    </section>
+  </main>
 
-    </main>
+  <footer>
+    <p>&copy; <span id="year">2026</span> Catthode. Open Source.</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 Catthode. Open Source.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="app.js" defer></script>
 </body>
-
 </html>
