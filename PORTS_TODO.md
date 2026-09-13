@@ -31,9 +31,9 @@ Last reviewed: 2026-09-12
 - [ ] **Spicetify Marketplace**
   - [x] Publish the required `color.ini`, `user.css`, and marketplace metadata.
   - [x] Lint the CSS and validate every required color key in CI.
-  - [x] Apply the theme through the Nix-managed Spicetify install and inspect Home cards, play-button hover states, playback controls, progress and volume indicators, lyrics, and the mini-player in Spotify 1.2.99.317 with Spicetify 2.45.0 on macOS.
+  - [x] Apply the theme through the Nix-managed Spicetify install and inspect Home cards, play-button hover states, playback controls, progress and volume indicators, the active-track equalizer, lyrics, and the mini-player in Spotify 1.2.99.317 with Spicetify 2.45.0 on macOS.
   - [x] Keep Catthode as the user's installed Spotify theme; no disposable Spotify or Spicetify installation was added.
-  - [ ] Replace the initial repository-native SVG with a genuine privacy-safe screenshot from public content, excluding the library rail, account avatar, device name, recommendations, and notifications.
+  - [x] Replace the initial repository-native SVG with a genuine privacy-safe screenshot from public content, excluding the library rail, account avatar, device name, recommendations, and notifications.
   - [x] Push the final files, pass CI, and add the public repository topic `spicetify-themes` to publish it to Marketplace discovery.
 
 - [ ] **Home Assistant / HACS**
