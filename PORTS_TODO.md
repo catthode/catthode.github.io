@@ -1,6 +1,6 @@
 # Catthode port follow-ups
 
-Last reviewed: 2026-09-06
+Last reviewed: 2026-09-12
 
 ## Manual testing and submission
 
@@ -14,16 +14,19 @@ Last reviewed: 2026-09-06
 - [ ] **Firefox Add-ons**
   - [x] Publish a static WebExtension theme with the stable ID `catthode@cattho.de`.
   - [x] Pass Mozilla's current `web-ext lint --warnings-as-errors` and produce an unsigned store ZIP in CI.
-  - [ ] Run the theme in a temporary Firefox profile and inspect horizontal tabs, vertical tabs, toolbar fields, popups, sidebars, and new-tab UI.
-  - [ ] Capture genuine Firefox listing screenshots, then remove the temporary profile.
-  - [ ] Sign in to Mozilla Add-ons, supply API credentials, and submit the package for signing/review.
+  - [x] Run the theme in a temporary Firefox profile and inspect horizontal and vertical tabs, toolbar fields, popups, sidebars, and new-tab UI.
+  - [x] Capture a genuine Firefox listing screenshot from a smaller native-size window without resizing.
+  - [x] Remove the temporary Firefox app, download, and working files; move the test-created profile, cache, and preference file to Trash for recoverability.
+  - [x] Submit `v0.1.0` to Mozilla Add-ons; Mozilla approved the version.
+  - [ ] Add the approved detailed description to the AMO product page.
 
 - [ ] **Spicetify Marketplace**
   - [x] Publish the required `color.ini`, `user.css`, and marketplace metadata.
   - [x] Lint the CSS and validate every required color key in CI.
-  - [ ] Apply the theme in a disposable Spicetify/Spotify setup with a test account and inspect Home, Search, Library, playlists, Now Playing, queue, and dialogs.
-  - [ ] Restore Spotify and remove only the disposable Spicetify data created for the check.
-  - [ ] Submit the tested theme to the Spicetify Marketplace catalog.
+  - [x] Apply the theme through the Nix-managed Spicetify install and inspect Home cards, play-button hover states, playback controls, progress and volume indicators, lyrics, and the mini-player in Spotify 1.2.99.317 with Spicetify 2.45.0 on macOS.
+  - [x] Keep Catthode as the user's installed Spotify theme; no disposable Spotify or Spicetify installation was added.
+  - [ ] Replace the initial repository-native SVG with a genuine privacy-safe screenshot from public content, excluding the library rail, account avatar, device name, recommendations, and notifications.
+  - [x] Push the final files, pass CI, and add the public repository topic `spicetify-themes` to publish it to Marketplace discovery.
 
 - [ ] **Home Assistant / HACS**
   - [x] Publish one theme YAML in the HACS-required repository layout.
@@ -39,16 +42,19 @@ Last reviewed: 2026-09-06
   - [ ] Produce a genuine 1280 x 800 IDE screenshot. The disposable runner reached the JetBrains Community Edition agreement and stopped without accepting it.
   - [ ] Upload the verified JAR and screenshot for review.
 
-- [ ] **Zed Extension Gallery**
+- [x] **Zed Extension Gallery**
   - [x] Package `v0.1.1` with the compliant immutable ID `catthode-theme`.
   - [x] Validate the theme against Zed's live `v0.2.0` JSON schema.
-  - [ ] Record whether Zed or its data directory already exists before testing.
-  - [ ] Run Zed temporarily, install the repository as a dev extension, and inspect the workbench, syntax, terminal, diagnostics, and collaboration colors.
-  - [ ] Remove only the app and data created by the temporary test.
-  - [ ] Submit the tested commit to `zed-industries/extensions`.
+  - [x] Record that Zed and its standard app/data paths were absent before testing.
+  - [x] Run Zed 1.19.2 temporarily, install `v0.1.1` as a dev extension, and inspect the workbench, syntax, terminal ANSI palette, and diagnostics.
+  - [x] Verify the seven collaboration cursor/selection color slots remain schema-valid; a live multi-user cursor session was not required for the registry draft.
+  - [x] Capture a genuine native-size screenshot, remove the pointer with a localized pixel repair, and display the verified image in the repository README.
+  - [x] Remove the temporary app, download, isolated user data, preferences, and logs created by the test.
+  - [x] Submit the tested commit to `zed-industries/extensions`; PR [#7575](https://github.com/zed-industries/extensions/pull/7575) is open, mergeable, and passing package, Danger, and CLA checks.
 
 ## Open community follow-ups
 
+- [ ] Configure and verify the `mail@cattho.de` mailbox used as the public support contact for theme-store listings.
 - [ ] Monitor `mbadolato/iTerm2-Color-Schemes#741`; delete the `jes-bz/iTerm2-Color-Schemes` fork after merge.
 - [ ] Delete the merged `jes-bz/wiki` fork through GitHub settings; the current CLI token does not have `delete_repo` scope.
 
