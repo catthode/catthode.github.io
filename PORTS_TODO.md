@@ -7,8 +7,9 @@ Last reviewed: 2026-09-12
 - [ ] **Ghostty GitHub port**
   - [x] Publish the native theme in a dedicated, Catthode-owned `catthode/ghostty` repository.
   - [x] Pass structural validation and Ghostty 1.3.1's native config validator.
-  - [ ] Apply the theme through the Nix-managed Ghostty installation and inspect ANSI colors, cursor, selection, search, splits, and terminal applications.
-  - [ ] Capture a genuine screenshot using synthetic terminal content with no username, paths, command history, or other personal data.
+  - [x] Apply the theme through the Nix-managed Ghostty installation and inspect the native ANSI palette, background, and text contrast.
+  - [ ] Inspect cursor, selection, search, splits, and representative terminal applications.
+  - [x] Capture a genuine screenshot using synthetic terminal content with no username, paths, command history, or other personal data.
   - [x] Keep distribution GitHub-first; there is no official Ghostty theme store and no upstream collection submission is planned.
 
 - [ ] **Discord theme directories**
